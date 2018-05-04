@@ -1,0 +1,4 @@
+{
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "chrome --incognito --headless --remote-debugging-port=9222",
+    "editor.fontSize": 14
+}
