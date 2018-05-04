@@ -10,7 +10,13 @@ new Vue({
             y: 0
         },
         showName: false,
-        showAge: true
+        showAge: true,
+        items: ['Mushroom', 'Green Shells', 'Red Shells', 'Banana', 'Star'],
+        ninjas: [
+            { name: 'Crystal', age: 25, belt: 'black' },
+            { name: 'Ryu', age: 30, belt: 'brown' },
+            { name: 'Ken', age: 35, belt: 'orange' }
+        ]
     },
     methods: {
         changeWage(amount){
