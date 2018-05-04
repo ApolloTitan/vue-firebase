@@ -22,8 +22,11 @@
             <button v-on:dblclick="changeWage(5)">Increase wage by 5 pound</button>
             <br><br>
             <button v-on:click="logEvent">Log Event Info</button>
-
             <div class="canvas" v-on:mousemove="logCoords">{{ coords.x }}, {{ coords.y }}</div>
+            <br>
+            <p>My Name is {{ name }}</p>
+            <input type="text" v-on:keyup="updateName">
+            <input type="text" v-on:keypress="updateName">
         </div>
 
         <script src="app.js"></script>
