@@ -27,6 +27,28 @@
             <p>My Name is {{ name }}</p>
             <input type="text" v-on:keyup="updateName">
             <input type="text" v-on:keypress="updateName">
+            <br><br>
+            <p>Firstname {{ firstname }}</p>
+            <input type="text" v-model="firstname">
+
+            <br><br>
+            <button v-on:click="logMessage">Click me!</button>
+            <button v-on:click.alt="logMessage">Click me! (with alt)</button>
+            <button v-on:click.shift="logMessage">Click me! (with shift)</button>
+
+            <br><br>
+            <a href="http://www.google.com" v-on:click.prevent="logMessage">Google (prevent)</a>
+
+            <br>
+            <a href="https://vuejs.org/v2/guide/events.html#Event-Modifiers">Vue.js Event Modifiers Guide</a>
+            <br><br>
+            
+            <button v-on:click="toggleName">ShowName: {{ showName }}</button>
+            <button v-on:click="toggleAge">ShowAge: {{ showAge }}</button>
+            <p v-if="showName">Supermario</p>
+            <p v-else-if="!showName">ShowName: false</p> 
+
+            <p v-if="showAge">25</p>
         </div>
 
         <script src="app.js"></script>

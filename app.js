@@ -2,12 +2,15 @@ new Vue({
     el: '#app',
     data: {
         title: 'Becoming a Vue ninja.',
+        firstname: 'Franzl',
         name: 'Sissi',
         wage: 10,
         coords: {
             x: 0,
             y: 0
-        }
+        },
+        showName: false,
+        showAge: true
     },
     methods: {
         changeWage(amount){
@@ -24,6 +27,15 @@ new Vue({
         updateName(e){
             console.log(e.target.value)
             this.name = e.target.value
+        },
+        logMessage(){
+            console.log("Hello world")
+        },
+        toggleName(){
+            this.showName = !this.showName
+        },
+        toggleAge(){
+            this.showAge = !this.showAge
         }
     }
 })
