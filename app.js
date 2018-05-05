@@ -16,7 +16,8 @@ new Vue({
             { name: 'Crystal', age: 25, belt: 'black' },
             { name: 'Ryu', age: 30, belt: 'brown' },
             { name: 'Ken', age: 35, belt: 'orange' }
-        ]
+        ],
+        posts: [{ title: 'test', body: 'test-body'}]
     },
     methods: {
         changeWage(amount){
@@ -42,6 +43,28 @@ new Vue({
         },
         toggleAge(){
             this.showAge = !this.showAge
+        },
+        loadData(){
+            axios.get('https://jsonplaceholder.typicode.com/posts')
+            .then(reponse => {
+                console.log(reponse)
+                this.posts = reponse.data
+                console.log("Done: " + this.posts.length)
+            })
+            .catch(function(error) {
+                console.log(error)
+            })
         }
+    },
+    created(){
+        axios.get('https://jsonplaceholder.typicode.com/posts')
+        .then(reponse => {
+            console.log(reponse)
+            this.posts = reponse.data
+            console.log("Done: " + this.posts.length)
+        })
+        .catch(function(error) {
+            console.log(error)
+        })
     }
 })

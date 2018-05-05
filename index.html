@@ -2,6 +2,7 @@
     <head>
         <title>Vue Basics</title>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <style>
             .canvas{
                 width: 300px;
@@ -60,8 +61,15 @@
                 <p>{{index}} - {{ ninja.name }}</p>
                 <p>age: {{ ninja.age }}, belt: {{ ninja.belt }}</p>
             </div>
+            <h1>REST-API</h1>
+            <button v-on:click="loadData">Load Data</button>
+            <div v-for="post in posts" :key="post.index">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.body }}</p>
+            </div>
         </div>
 
         <script src="app.js"></script>
+       
     </body>
 </html>
